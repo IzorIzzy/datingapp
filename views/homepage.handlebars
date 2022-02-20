@@ -1,3 +1,22 @@
+
+
+{{!-- If logged in - display profiles --}}
+{{#if session.loggedIn}}
+<ol class="profile-list">
+  {{#each profiles as |profile|}}
+    <li>
+      <article class="profile">
+        <div class="title">
+          {{profile.username}}
+        </div>
+      </article>
+    </li>
+  {{/each}}
+</ol>
+{{else}}
+
+
+
 <form class="login-form">
   <div class="row"></div>
   <div class="row">
@@ -102,16 +121,6 @@
   </div>
     </form>
 </div>
+{{/if}}
 
-<ol class="profile-list">
-  {{#each profile as |profile|}}
-    <li>
-      <article class="profile">
-        <div class="title">
-          {{profile.id}}
-        </div>
-      </article>
-    </li>
-  {{/each}}
-</ol>
 <script src="/javascript/login.js"></script>
