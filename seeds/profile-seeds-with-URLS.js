@@ -2,8 +2,8 @@ const { Profile } = require('../models');
 
 const profiledata = [
   {
-    username: 'alesmonde0',
-    email: 'nwestnedge0@cbc.ca',
+    username: 'DWIGHT K. SCHRUTE',
+    email: 'bearsandbeets@schrute.farms.com',
     password: 'password123',
     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
     age: '34',
@@ -12,8 +12,8 @@ const profiledata = [
     imageurl: 'https://rb.gy/owxexv'
   },
   {
-    username: 'jwilloughway1',
-    email: 'rmebes1@sogou.com',
+    username: 'Big Tuna',
+    email: 'jimbohalpert@athlead.com',
     password: 'password123',
     bio: 'Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
     age: '35',
@@ -22,8 +22,8 @@ const profiledata = [
     imageurl: 'https://rb.gy/pzjnst'
   },
   {
-    username: 'iboddam2',
-    email: 'cstoneman2@last.fm',
+    username: 'Michael Scarn',
+    email: 'bestboss@dundermifflin.sabre.com',
     password: 'password123',
     bio: 'Ipsum dolor sit amet,do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
     age: '21',
@@ -32,8 +32,8 @@ const profiledata = [
     imageurl: 'https://rb.gy/oa1o1b'
   },
   {
-    username: 'dstanmer3',
-    email: 'ihellier3@goo.ne.jp',
+    username: 'Stanley the Manly',
+    email: 'ilovepretzels@diabetesawareness.com',
     password: 'password123',
     bio: 'Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
     age: '61',
@@ -42,8 +42,8 @@ const profiledata = [
     imageurl: 'https://rb.gy/doivgq'
   },
   {
-    username: 'djiri4',
-    email: 'gmidgley4@weather.com',
+    username: 'Pam-OLA',
+    email: 'artgirl1@prattinstitute.edu',
     password: 'password123',
     bio: 'Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
     age: '61',
@@ -62,8 +62,8 @@ const profiledata = [
     imageurl: 'https://rb.gy/qaklfn'
   },
   {
-    username: 'mpergens6',
-    email: 'hnapleton6@feedburner.com',
+    username: 'Kelly E.',
+    email: 'kellyAKAerinAKAreceptionist@sabre.com',
     password: 'password123',
     bio: 'Ut enim ad minim veniam, quis nostrud. Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
     age: '61',
@@ -72,8 +72,8 @@ const profiledata = [
     imageurl: 'https://rb.gy/paagk5'
   },
   {
-    username: 'tpenniell7',
-    email: 'kperigo7@china.com.cn',
+    username: 'Cookie Monster Kev',
+    email: 'the_drummer_scrantonicity@dundermifflin.com',
     password: 'password123',
     bio: 'Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
     age: '61',
