@@ -1,157 +1,164 @@
-
-
-{{!-- If logged in - display profiles --}}
+{{! If logged in - display profiles }}
 {{#if session.loggedIn}}
 
   {{#each profiles as |profile|}}
-  <div class="row">
-<div class="card col s12 m10 offset-m1 l6 offset-l3">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="{{profile.imageurl}}">
-    </div>
-    <div class="card-content">
+    <div class="row">
+      <div class="card col s12 m10 offset-m1 l6 offset-l3">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{profile.imageurl}}" />
+        </div>
+        <div class="card-content">
 
-      <span class="card-title activator grey-text text-darken-4">
-        {{profile.username}}, {{profile.age}}
-        <span class="chip indigo accent-3 white-text right">
-        Shift {{profile.shift}}
-  </span>
-        </span>
-      
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">{{profile.username}}<i class="material-icons right">close</i></span>
-      <table>
+          <span class="card-title activator grey-text text-darken-4">
+            {{profile.username}},
+            {{profile.age}}
+            <span class="chip indigo accent-3 white-text right">
+              Shift
+              {{profile.shift}}
+            </span>
+          </span>
 
-        <tbody>
-          <tr>
-            <td>Age</td>
-            <td>{{profile.age}}</td>
-          </tr>
-          <tr>
-            <td>Shift</td>
-            <td>{{profile.shift}}</td>
-          </tr>
-          <tr>
-            <td>Preferred Contact</td>
-            <td>{{profile.contact}}</td>
-          </tr>
-        </tbody>
-      </table>
-       <p>Bio: {{profile.bio}}</p>
-            
+        </div>
+        <div class="card-reveal">
+          <span
+            class="card-title grey-text text-darken-4"
+          >{{profile.username}}<i class="material-icons right">close</i></span>
+          <table>
+
+            <tbody>
+              <tr>
+                <td>Age</td>
+                <td>{{profile.age}}</td>
+              </tr>
+              <tr>
+                <td>Shift</td>
+                <td>{{profile.shift}}</td>
+              </tr>
+              <tr>
+                <td>Preferred Contact</td>
+                <td>{{profile.contact}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Bio: {{profile.bio}}</p>
+
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   {{/each}}
 {{else}}
 
-
-
-<form class="login-form">
-  <div class="row"></div>
-  <div class="row">
-    <div class="col s6">
-      <img class="responsive-img" src="images/login-image.jpeg">
-    </div>
-    <div class="col s6">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email-login" type="text" class="validate">
-          <label for="email-login">Email</label>
-        </div>
-      </div>
-  
+  <form class="login-form">
+    <div class="row"></div>
     <div class="row">
-        <div class="input-field col s12">
-          <input id="password-login" type="password" class="validate">
-          <label for="password-login">Password</label>
-        </div>
+      <div class="col s6">
+        <img class="responsive-img" src="images/login-image.jpeg" />
       </div>
-  
-  <button class="btn deep-purple" type="submit">Login</button>
-  <!-- Modal Trigger -->
-<button data-target="modal1" class="btn modal-trigger">Signup</button>
+      <div class="col s6">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email-login" type="text" class="validate" />
+            <label for="email-login">Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password-login" type="password" class="validate" />
+            <label for="password-login">Password</label>
+          </div>
+        </div>
+
+        <button class="btn deep-purple" type="submit">Login</button>
+        <!-- Modal Trigger -->
+        <button data-target="modal1" class="btn modal-trigger">Signup</button>
+      </div>
     </div>
-  </div>
-    
 
-</form>
+  </form>
 
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <form class="signup-form">
+      <div class="modal-content">
+        <h4>Signup Form</h4>
 
-
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-  <form class="signup-form">
-  <div class="modal-content">
-    <h4>Signup Form</h4>
-    
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="username-signup" type="text" class="validate">
-          <label for="username-signup">Username</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="username-signup" type="text" class="validate" />
+            <label for="username-signup">Username</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email-signup" type="text" class="validate">
-          <label for="email-signup">Email</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email-signup" type="text" class="validate" />
+            <label for="email-signup">Email</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password-signup" type="password" class="validate">
-          <label for="password-signup">Password</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password-signup" type="password" class="validate" />
+            <label for="password-signup">Password</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="bio-signup" class="materialize-textarea"></textarea>
-          <label for="bio-signup">Hobbies/Interests/Other</label>
-          <span class="helper-text" data-error="wrong" data-success="right">Minimum 20 characters</span>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="bio-signup" class="materialize-textarea"></textarea>
+            <label for="bio-signup">Hobbies/Interests/Other</label>
+            <span
+              class="helper-text"
+              data-error="wrong"
+              data-success="right"
+            >Minimum 20 characters</span>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="age-signup" type="number" class="validate">
-          <label for="age-signup">Age</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="age-signup" type="number" class="validate" />
+            <label for="age-signup">Age</label>
+          </div>
         </div>
-      </div>
-<div class="row"> 
-  <div class="input-field col s12">
-    <select id="shift-signup">
-      <option value="" disabled selected>Which shift do you work?</option>
-      <option value="1">Shift 1</option>
-      <option value="2">Shift 2</option>
-      <option value="3">Shift 3</option>
-    </select>
-    <label for="shift-signup">Shift</label>
-  </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="contact-signup" type="text" class="validate">
-          <label for="contact-signup">What is your preferred method of contact?</label>
-          <span class="helper-text" data-error="wrong" data-success="right">Example: Facebook Page, Phone number, Snapchat, Email Address</span>
+        <div class="row">
+          <div class="input-field col s12">
+            <select id="shift-signup">
+              <option value="" disabled selected>Which shift do you work?</option>
+              <option value="1">Shift 1</option>
+              <option value="2">Shift 2</option>
+              <option value="3">Shift 3</option>
+            </select>
+            <label for="shift-signup">Shift</label>
+          </div>
         </div>
-      </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="contact-signup" type="text" class="validate" />
+            <label for="contact-signup">What is your preferred method of
+              contact?</label>
+            <span
+              class="helper-text"
+              data-error="wrong"
+              data-success="right"
+            >Example: Facebook Page, Phone number, Snapchat, Email Address</span>
+          </div>
+        </div>
 
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="imageurl-signup" type="text" class="validate">
-          <label for="imageurl-signup">Profile Image URL</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="imageurl-signup" type="text" class="validate" />
+            <label for="imageurl-signup">Profile Image URL</label>
 
+          </div>
         </div>
-      </div>
 
-  
-  </div>
-  <div class="modal-footer">
-    <button type="submit" class="modal-close waves-effect waves-green btn-flat">Signup</button>
-  </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="submit"
+          class="modal-close waves-effect waves-green btn-flat"
+        >Signup</button>
+      </div>
     </form>
-</div>
+  </div>
 {{/if}}
 
 <script src="/javascript/login.js"></script>
