@@ -19,6 +19,7 @@
         </span>
       
     </div>
+    {{!-- When card is clicked --}}
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">{{profile.username}}<i class="material-icons right">close</i></span>
       <table>
@@ -38,7 +39,7 @@
           </tr>
         </tbody>
       </table>
-       <p>Bio: {{profile.bio}}</p>
+       <p>{{profile.bio}}</p>
             
     </div>
   </div>
@@ -133,7 +134,7 @@
         <div class="input-field col s12">
           <input id="contact-signup" type="text" class="validate">
           <label for="contact-signup">What is your preferred method of contact?</label>
-          <span class="helper-text" data-error="wrong" data-success="right">Example: Facebook Page, Phone number, Snapchat, Email Address</span>
+          <span class="helper-text" data-error="wrong" data-success="right">Example: Facebook, Instagram, Phone number, Snapchat, Email Address (include URL)</span>
         </div>
       </div>
 
