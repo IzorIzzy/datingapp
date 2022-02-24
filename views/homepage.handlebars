@@ -13,9 +13,11 @@
 
       <span class="card-title activator grey-text text-darken-4">
         {{profile.username}}, {{profile.age}}
-        <span class="chip chip indigo accent-3 white-text right">
+        <i onclick='toggleFavorite("{{profile.id}}")' class="material-icons amber-text right">star_border</i>
+        <span class="chip indigo accent-3 white-text right">
         Shift {{profile.shift}}
-  </span>
+        </span>
+        
         </span>
       
     </div>
