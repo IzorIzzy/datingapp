@@ -19,4 +19,24 @@ router.post('/', (req, res) => {
       });
   });
 
+router.delete('/:favorite_id', (req,res)=> {
+    Favorite.destroy({
+        where: {
+            profile_id: req.session.profile_id,
+          favorite_id: req.params.favorite_id
+        }
+      })
+        .then(dbFavoriteData => {
+          if (!dbFavoriteData) {
+            res.status(404).json({ message: 'No favorite found with this id' });
+            return;
+          }
+          res.json(dbFavoriteData);
+        })
+        .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+        });
+})
+
   module.exports = router;
