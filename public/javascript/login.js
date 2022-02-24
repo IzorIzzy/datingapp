@@ -59,6 +59,19 @@ async function signupFormHandler(event) {
   }
 }
 
+
+async function toggleFavorite(favoriteId) {
+  const response = await fetch('/api/favorites', {
+    method: 'post',
+    body: JSON.stringify({
+      favorite_id:favoriteId
+    }),
+    headers: { 'Content-Type': 'application/json' }
+  });
+  console.log(response)
+
+}
+
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);

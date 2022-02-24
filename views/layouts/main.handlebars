@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    
 
   </head>
 
@@ -21,11 +22,12 @@
       <nav class="teal darken-1">
 
         <div class="nav-wrapper container ">
-          <a href="#" class="brand-logo">All Tied Up 📆</a>
+          <a href="#" class="brand-logo">All Tied App 📆</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             {{!-- <li><a href="/login">Login</a></li> --}}
             {{#if session.loggedIn}}
             <li> {{session.username}}</li>
+            <li><a href="/api/profiles/logout"> Logout</a></li>
             {{/if}}
 
           </ul>
@@ -49,7 +51,7 @@
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="https://github.com/Alfrugo">Alfredo</a></li>
                   <li><a class="grey-text text-lighten-3" href="https://github.com/IzorIzzy">Issachar</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://github.com/tiffsobczak">Tiffany Sobczak</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/tiffsobczak">Tiffany</a></li>
                 </ul>
               </div>
             </div>
