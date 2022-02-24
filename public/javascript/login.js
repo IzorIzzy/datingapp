@@ -60,15 +60,25 @@ async function signupFormHandler(event) {
 }
 
 
-async function toggleFavorite(favoriteId) {
-  const response = await fetch('/api/favorites', {
-    method: 'post',
-    body: JSON.stringify({
-      favorite_id:favoriteId
-    }),
-    headers: { 'Content-Type': 'application/json' }
-  });
-  console.log(response)
+async function toggleFavorite(event, favoriteId, isFavorite) {
+  //keeps card from opening when star clicked
+  event.preventDefault()
+  event.stopPropagation()
+  if (isFavorite===false){
+    const response = await fetch('/api/favorites', {
+      method: 'post',
+      body: JSON.stringify({
+        favorite_id:favoriteId
+      }),
+      headers: { 'Content-Type': 'application/json' }
+
+    });
+  } else {
+    const response = await fetch('/api/favorites/'+favoriteId, {
+      method: 'delete',
+    });
+  }
+  location.reload  ()
 
 }
 

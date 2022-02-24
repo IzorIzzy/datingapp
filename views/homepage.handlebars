@@ -13,7 +13,13 @@
 
       <span class="card-title activator grey-text text-darken-4">
         {{profile.username}}, {{profile.age}}
-        <i onclick='toggleFavorite("{{profile.id}}")' class="material-icons amber-text right">star_border</i>
+        {{#if profile.isFavorite}}
+        {{!-- indicates favorite with filled star --}}
+        <i onclick='toggleFavorite(event,"{{profile.id}}",{{profile.isFavorite}})' class="material-icons amber-text right">star</i>
+        {{else }}
+        {{!-- not a favorite with a star border --}}
+        <i onclick='toggleFavorite(event,"{{profile.id}}",{{profile.isFavorite}})' class="material-icons amber-text right">star_border</i>
+        {{/if}}
         <span class="chip indigo accent-3 white-text right">
         Shift {{profile.shift}}
         </span>
