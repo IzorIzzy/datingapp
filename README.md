@@ -1,4 +1,4 @@
-# TiedUp
+# All Tied App
 
 ![Screenshot (15)](https://user-images.githubusercontent.com/93059565/155924841-23f168bc-1c33-488a-9d49-47da17120f1f.png)
 
